@@ -127,7 +127,7 @@ data "template_file" "userdata" {
 #############################
 resource "aws_instance" "mongo_secondary" {
   count                       = var.num_secondary_nodes
-  ami                         = var.mongo_ami
+  ami                         = "ami-0abb0f6c7cff47436"
   instance_type               = var.secondary_node_type
   key_name                    = var.key_name
   subnet_id                   = var.mongo_subnet_id
@@ -186,7 +186,7 @@ resource "aws_instance" "mongo_secondary" {
 # Mongo Primary Instances
 #############################
 resource "aws_instance" "mongo_primary" {
-  ami                         = var.mongo_ami
+  ami                         = "ami-0abb0f6c7cff47436"
   instance_type               = var.primary_node_type
   key_name                    = var.key_name
   subnet_id                   = var.mongo_subnet_id
