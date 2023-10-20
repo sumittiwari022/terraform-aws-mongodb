@@ -4,7 +4,7 @@ variable "region" {
 
 variable "mongo_ami" {
   type    = string
-  default = "ami-0abb0f6c7cff47436"
+  default = "ami-063e5976b6351fd08"
 }
 
 variable "secondary_node_type" {
